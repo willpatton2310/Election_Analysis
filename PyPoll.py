@@ -18,6 +18,7 @@ file_to_load = 'Resources\election_results.csv'
 #Add our dependencies
 import csv
 import os
+from winreg import EnableReflectionKey
 
 #assign a vaiable for the file to load and the path
 file_to_load = os.path.join("Resources","election_results.csv")
@@ -97,7 +98,7 @@ with open(file_to_save,"w") as txt_file:
     #Print candidate_results
 
         # print(candidate_results)
-        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}: ({votes:,})\n") 
+        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}%: ({votes:,})\n") 
         print(candidate_results)
 
         #save candidate results to text file
